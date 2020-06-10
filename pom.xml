@@ -44,6 +44,6 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/GeekStartup/gs-pet-clinic.git</developerConnection>
-<!--        <tag>HEAD</tag>-->
+        <tag>HEAD</tag>
     </scm>
 </project>
