@@ -44,7 +44,7 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:GeekStartup/gs-pet-clinic.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/GeekStartup/gs-pet-clinic.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 </project>
