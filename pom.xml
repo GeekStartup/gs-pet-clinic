@@ -43,7 +43,7 @@
         </plugins>
     </build>
     <scm>
-        <developerConnection>scm:git:ssh:git@github.com:GeekStartup/gs-pet-clinic.git</developerConnection>
-      <tag>gs-pet-clinic-0.0.5</tag>
+        <developerConnection>scm:git:git@github.com:GeekStartup/gs-pet-clinic.git</developerConnection>
+      <tag>HEAD</tag>
   </scm>
 </project>
