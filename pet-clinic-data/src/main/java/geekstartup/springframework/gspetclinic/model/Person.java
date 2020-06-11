@@ -1,5 +1,8 @@
 package geekstartup.springframework.gspetclinic.model;
 
+/**
+ * Created by ashishnayak on 10-Jun-2020||8:46 PM
+ */
 public class Person {
     private String firstName;
     private String lastName;
