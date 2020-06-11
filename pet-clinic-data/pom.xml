@@ -3,7 +3,7 @@
     <parent>
         <artifactId>gs-pet-clinic</artifactId>
         <groupId>geekstartup.springframework</groupId>
-        <version>0.0.2</version>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>pet-clinic-data</artifactId>
