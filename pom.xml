@@ -14,7 +14,7 @@
     </parent>
     <groupId>geekstartup.springframework</groupId>
     <artifactId>gs-pet-clinic</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7-SNAPSHOT</version>
     <name>gs-pet-clinic</name>
     <description>Demo project for Spring Boot</description>
 
@@ -44,6 +44,6 @@
     </build>
     <scm>
         <developerConnection>scm:git:git@github.com:GeekStartup/gs-pet-clinic.git</developerConnection>
-      <tag>gs-pet-clinic-0.0.6</tag>
+      <tag>HEAD</tag>
   </scm>
 </project>
