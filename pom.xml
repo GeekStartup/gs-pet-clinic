@@ -14,12 +14,12 @@
     </parent>
     <groupId>geekstartup.springframework</groupId>
     <artifactId>gs-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>gs-pet-clinic</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>14</java.version>
+        <java.version>8</java.version>
     </properties>
 
     <dependencies>
@@ -42,9 +42,7 @@
             </plugin>
         </plugins>
     </build>
-
     <scm>
-        <developerConnection>scm:git:https://github.com/GeekStartup/gs-pet-clinic.git</developerConnection>
-        <tag>HEAD</tag>
+        <developerConnection>scm:git:ssh:git@github.com:GeekStartup/gs-pet-clinic.git</developerConnection>
     </scm>
 </project>
