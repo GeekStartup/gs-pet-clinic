@@ -1,10 +1,5 @@
 package geekstartup.springframework.gspetclinic.model;
 
-/**
- * @author ashishnayak
- * @created 10-Jun-2020||1:08 PM
- * @project gs-pet-clinic
- */
 public class PetType {
     private String name;
 

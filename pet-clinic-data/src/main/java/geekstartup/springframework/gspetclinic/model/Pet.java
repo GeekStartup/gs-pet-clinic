@@ -2,11 +2,6 @@ package geekstartup.springframework.gspetclinic.model;
 
 import java.time.LocalDate;
 
-/**
- * @author ashishnayak
- * @created 10-Jun-2020||1:07 PM
- * @project gs-pet-clinic
- */
 public class Pet {
     private PetType petType;
     private Owner owner;

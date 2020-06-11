@@ -1,10 +1,5 @@
 package geekstartup.springframework.gspetclinic.model;
 
-/**
- * @author ashishnayak
- * @created 10-Jun-2020||12:55 PM
- * @project gs-pet-clinic
- */
 public class Person {
     private String firstName;
     private String lastName;
