@@ -2,12 +2,14 @@ package geekstartup.springframework.gspetclinic.services.map;
 
 import geekstartup.springframework.gspetclinic.model.Owner;
 import geekstartup.springframework.gspetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by ashishnayak on 15-Jun-2020||9:11 PM
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {

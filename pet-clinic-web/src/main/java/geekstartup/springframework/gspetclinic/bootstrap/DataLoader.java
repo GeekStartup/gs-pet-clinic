@@ -4,8 +4,6 @@ import geekstartup.springframework.gspetclinic.model.Owner;
 import geekstartup.springframework.gspetclinic.model.Vet;
 import geekstartup.springframework.gspetclinic.services.OwnerService;
 import geekstartup.springframework.gspetclinic.services.VetService;
-import geekstartup.springframework.gspetclinic.services.map.OwnerServiceMap;
-import geekstartup.springframework.gspetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -18,9 +16,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
