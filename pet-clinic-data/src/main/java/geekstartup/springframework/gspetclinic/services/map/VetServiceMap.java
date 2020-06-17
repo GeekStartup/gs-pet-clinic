@@ -1,14 +1,14 @@
 package geekstartup.springframework.gspetclinic.services.map;
 
 import geekstartup.springframework.gspetclinic.model.Vet;
-import geekstartup.springframework.gspetclinic.services.CrudService;
+import geekstartup.springframework.gspetclinic.services.VetService;
 
 import java.util.Set;
 
 /**
  * Created by ashishnayak on 15-Jun-2020||9:23 PM
  */
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {

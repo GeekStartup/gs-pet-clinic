@@ -1,14 +1,14 @@
 package geekstartup.springframework.gspetclinic.services.map;
 
 import geekstartup.springframework.gspetclinic.model.Owner;
-import geekstartup.springframework.gspetclinic.services.CrudService;
+import geekstartup.springframework.gspetclinic.services.OwnerService;
 
 import java.util.Set;
 
 /**
  * Created by ashishnayak on 15-Jun-2020||9:11 PM
  */
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -32,5 +32,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
