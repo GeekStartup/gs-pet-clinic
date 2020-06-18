@@ -1,16 +1,15 @@
 package geekstartup.springframework.gspetclinic.services.map;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import geekstartup.springframework.gspetclinic.model.BaseEntity;
+
+import java.util.*;
 
 /**
  * Created by ashishnayak on 15-Jun-2020||8:59 PM
  */
-public abstract class AbstractMapService<T, ID> {
+public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> {
 
-    protected Map<ID, T> map = new HashMap<>();
+    protected Map<Long, T> map = new HashMap<>();
 
     Set<T> findAll() {
         return new HashSet<>(map.values());
@@ -20,8 +19,17 @@ public abstract class AbstractMapService<T, ID> {
         return map.get(id);
     }
 
-    T save(ID id, T object) {
-        map.put(id, object);
+    T save(T object) {
+
+        if (null != object) {
+            if (null == object.getId()) {
+                object.setId(genNextId());
+            }
+            map.put(object.getId(), object);
+        } else {
+            throw new RuntimeException("Object can't be null");
+        }
+
         return object;
     }
 
@@ -31,6 +39,16 @@ public abstract class AbstractMapService<T, ID> {
 
     void delete(T object) {
         map.entrySet().removeIf(entry -> entry.getValue().equals(object));
+    }
+
+    private Long genNextId() {
+        Long nextId = null;
+        try {
+            nextId = Collections.max(map.keySet()) + 1;
+        } catch (NoSuchElementException e) {
+            nextId = 1L;
+        }
+        return nextId;
     }
 
 }
