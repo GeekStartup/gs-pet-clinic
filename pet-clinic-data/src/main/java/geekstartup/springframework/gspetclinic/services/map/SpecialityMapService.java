@@ -1,7 +1,7 @@
 package geekstartup.springframework.gspetclinic.services.map;
 
 import geekstartup.springframework.gspetclinic.model.Speciality;
-import geekstartup.springframework.gspetclinic.services.SpecialitiesService;
+import geekstartup.springframework.gspetclinic.services.SpecialityService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -10,7 +10,7 @@ import java.util.Set;
  * Created by ashishnayak on 21-Jun-2020||10:25 PM
  */
 @Service
-public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialitiesService {
+public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
 
     @Override
     public Set<Speciality> findAll() {
