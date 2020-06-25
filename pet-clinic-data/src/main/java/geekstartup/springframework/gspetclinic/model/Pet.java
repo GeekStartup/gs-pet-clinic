@@ -1,14 +1,28 @@
 package geekstartup.springframework.gspetclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
 /**
  * Created by ashishnayak on 10-Jun-2020||8:49 PM
  */
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity {
 
+    @Column(name = "name")
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
     private LocalDate birthDate;
 
