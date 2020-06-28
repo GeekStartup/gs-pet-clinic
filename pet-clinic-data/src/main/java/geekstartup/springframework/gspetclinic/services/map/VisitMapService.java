@@ -2,13 +2,15 @@ package geekstartup.springframework.gspetclinic.services.map;
 
 import geekstartup.springframework.gspetclinic.model.Visit;
 import geekstartup.springframework.gspetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by ashishnayak on 27-Jun-2020||10:34 PM
  */
-public class VistMapService extends AbstractMapService<Visit, Long> implements VisitService {
+@Service
+public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override
     public Set<Visit> findAll() {
