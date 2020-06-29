@@ -5,6 +5,7 @@ import geekstartup.springframework.gspetclinic.model.Pet;
 import geekstartup.springframework.gspetclinic.services.OwnerService;
 import geekstartup.springframework.gspetclinic.services.PetService;
 import geekstartup.springframework.gspetclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -13,6 +14,7 @@ import java.util.Set;
  * Created by ashishnayak on 15-Jun-2020||9:11 PM
  */
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
