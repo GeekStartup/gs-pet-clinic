@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  maven/test:
+  build:
     docker:
       - image: circleci/openjdk:8-jdk-node
     steps:
@@ -15,15 +15,10 @@ jobs:
           command: mvn dependency:go-offline --settings 'pom.xml'
       - run:
           name: Run Tests
-          command: mvn verify --settings 'pom.xml'
+          command: mvn install --settings 'pom.xml'
       - save_cache:
           paths:
             - ~/.m2
           key: maven-{{ checksum "/tmp/maven_cache_seed" }}
       - store_test_results:
           path: target/surefire-reports
-workflows:
-  maven_test:
-    jobs:
-      - maven/test
-  version: 2
